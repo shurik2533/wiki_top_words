@@ -1,0 +1,7 @@
+.idea
+.DS_Store
+*.iml
+*.sqlite3
+wiki_top_words/wiki_top_words/settings.py
+*.pyc
+wiki_top_words/wiki/migrations/*

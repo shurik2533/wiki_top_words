@@ -1,0 +1,22 @@
+{% extends "wiki/base.html" %}
+{% block title %}My amazing blog{% endblock %}
+
+{% block content %}
+{% if words %}
+    <h2>Most common 3500 English words in <b>{{ category.category_pretty_name }}</b></h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Word</th>
+            <th scope="col">Count</th>
+        </tr>
+        </thead
+        {% for word in words %}
+            <tr>
+                <td>{{ word.word }}</td><td>{{ word.count }}</td></tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No words are available.</p>
+{% endif %}
+{% endblock %}

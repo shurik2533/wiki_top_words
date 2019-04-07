@@ -1,0 +1,11 @@
+{% extends "wiki/base.html" %}
+{% block title %}My amazing blog{% endblock %}
+
+{% block content %}
+    <h2>Stop words</h2>
+    {% if stop %}
+        {{ stop|join:", " }}
+    {% else %}
+        <p>No categories are available.</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "wiki/base.html" %}
+{% block title %}My amazing blog{% endblock %}
+
+{% block content %}
+    <h2>Wikipedia most common English words by categories</h2>
+    {% if categories %}
+        <ul>
+            {% for category in categories %}
+                <li><a href="/categories/{{ category.category_name }}/">{{ category.category_pretty_name }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No categories are available.</p>
+    {% endif %}
+{% endblock %}

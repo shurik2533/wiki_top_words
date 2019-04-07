@@ -1,0 +1,11 @@
+{% extends "wiki/base.html" %}
+{% block title %}My amazing blog{% endblock %}
+
+{% block content %}
+    <p>
+        I analyzed all articles in the English Wikipedia and collected the most frequently used words from categories with more than 8000 articles.
+        From the resulting list, I excluded <a href="/stop_words/">stop words</a> and left the top 3500.
+    </p>
+    <p>Aleksandr Dmitriev</p>
+    <p>sh2533@gmail.com</p>
+{% endblock %}
