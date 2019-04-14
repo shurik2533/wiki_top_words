@@ -1,10 +1,12 @@
 {% extends "wiki/base.html" %}
-{% block title %}My amazing blog{% endblock %}
+{% block title %}Most common English words{% endblock %}
 
 {% block content %}
     <p>
-        I analyzed all articles in the English Wikipedia and collected the most frequently used words from categories with more than 8000 articles.
-        From the resulting list, I excluded <a href="/stop_words/">stop words</a> and left the top 3500.
+        I analyzed all articles in the English Wikipedia and collected the most frequently used words from Wiki categories that contains more than 4000 articles.
+    </p>
+    <p>
+        Each category has the most popular words in its topic. Words are sorted by weight, which depends on the frequency of the word in the category. If the word is present in the <a href="/categories/Most_common_Wikipedia_words">general category</a>, then its weight is reduced.
     </p>
     <p>Aleksandr Dmitriev</p>
     <p>sh2533@gmail.com</p>

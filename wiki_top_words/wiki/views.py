@@ -12,7 +12,7 @@ def index(request):
 
 
 def category_words(request, category_name):
-    words = Word.objects.filter(category__category_name=category_name).order_by('-count')
+    words = Word.objects.filter(category__category_name=category_name).order_by('-score')
     if not words:
         raise Http404("Category does not exist")
     context = {
